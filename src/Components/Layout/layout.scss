@@ -1,0 +1,129 @@
+$sidebar-width: 12%;
+
+
+.sidebar {
+  height: 100vh;
+  width: $sidebar-width;
+  position: fixed;
+  color:  white;
+}
+.content {
+  margin-left: $sidebar-width;
+}
+.greeting {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  &_content {
+    margin-left: 1.5rem;
+    background-color: transparent;
+    height: min-content;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: 600;
+    z-index: 1;
+
+    .letter {
+      display: inline-block;
+      color: #fff;
+      transition: 0.1s;
+      &:hover {
+        color: #2BF0FB;
+        cursor: pointer;
+    }
+   
+}
+ .name{
+        color:  #F2E307;
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+ 
+  }
+  &_avatar {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 40%;
+  }
+}
+.bounce {
+  animation: rubberBand 1s linear 1;
+}
+.space{
+   width: 20px;
+}
+
+.globe-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  black;
+  .globe{
+    background-color: transparent;
+    color: #F2E307;
+    .tagcloud--item{
+      font-size: 1rem;
+      opacity: 1;
+    }
+  }
+}
+
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    -ms-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    -ms-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    -ms-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    -ms-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    -ms-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
