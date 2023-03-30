@@ -1,4 +1,4 @@
-$sidebar-width: 12%;
+$sidebar-width: 11%;
 
 
 .sidebar {
@@ -6,6 +6,9 @@ $sidebar-width: 12%;
   width: $sidebar-width;
   position: fixed;
   color:  white;
+  &_logo{
+    background-color:#F2E307 ;
+  }
 }
 .content {
   margin-left: $sidebar-width;
@@ -52,6 +55,18 @@ $sidebar-width: 12%;
     width: 40%;
   }
 }
+.about-me{
+  background-color: #F2E307;
+}
+
+
+
+
+
+
+
+
+
 .bounce {
   animation: rubberBand 1s linear 1;
 }

@@ -8,8 +8,8 @@ function Skills() {
 
 
     return (
-        <div className='row'>
-            <div className="bg-warning col-md-6 p-5">
+        <div id='skills-section' className='d-flex'>
+            <div className="about-me col-md-6 p-5">
                 <h1>About Me</h1>
                 <p>
                     As a former professional football player turned web developer, I have a unique perspective on the world of technology. After sustaining an injury that ended my career on the field, I turned to coding and discovered a new passion for building things with my mind instead of my body.
