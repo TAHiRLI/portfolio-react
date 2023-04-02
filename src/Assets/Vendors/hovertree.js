@@ -196,12 +196,13 @@
 
         for (var i = 0, tendril; i < settings.trails; i++) {
             tendril = tendrils[i];
-            tendril.update();
-            tendril.draw();
+            tendril?.update();
+         
+            tendril?.draw();
         }
 
         ctx.frame++;
-        ctx.stats.update();
+        ctx.stats?.update();
         requestAnimFrame(loop);
     }
 

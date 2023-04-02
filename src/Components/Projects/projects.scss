@@ -1,0 +1,393 @@
+@import "../../Assets/Styles/variables.scss";
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgba(168, 239, 255, 1);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+.projects-container {
+  background-color: $dark-blue;
+}
+
+.screen-container {
+  width: min-content;
+  background-color: $dark-yellow;
+  padding: 2px;
+  margin: 20px 10px;
+  clip-path: polygon(
+    3% 0%,
+    0% 3%,
+    0% 97%,
+    3% 100%,
+    35.5% 100%,
+    40.5% 97%,
+    59.5% 97%,
+    64.5% 100%,
+    97% 100%,
+    100% 97%,
+    100% 3%,
+    97% 0%,
+    64.5% 0%,
+    59.5% 3%,
+    40.5% 3%,
+    35.5% 0%
+  );
+}
+.screen {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  width: 300px;
+  aspect-ratio: 10/16;
+  background-color: $dark-blue;
+  overflow: hidden;
+  clip-path: polygon(
+    3% 0%,
+    0% 3%,
+    0% 97%,
+    3% 100%,
+    35% 100%,
+    40% 97%,
+    60% 97%,
+    65% 100%,
+    97% 100%,
+    100% 97%,
+    100% 3%,
+    97% 0%,
+    65% 0%,
+    60% 3%,
+    40% 3%,
+    35% 0%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    bottom: 8px;
+    right: 7px;
+    background-color: $dark-yellow;
+    z-index: 3;
+    clip-path: polygon(
+      evenodd,
+      3% 0%,
+      0% 3%,
+      0% 97%,
+      3% 100%,
+      34% 100%,
+      39% 97%,
+      61% 97%,
+      66% 100%,
+      97% 100%,
+      100% 97%,
+      100% 3%,
+      97% 0%,
+      66% 0%,
+      61% 3%,
+      39% 3%,
+      34% 0%,
+      4% 0.5%,
+      1% 3.5%,
+      1% 96.5%,
+      4% 99.5%,
+      33.9% 99.5%,
+      38.9% 96.5%,
+      61.1% 96.5%,
+      66.1% 99.5%,
+      95.9% 99.5%,
+      98.9% 96.5%,
+      98.9% 3.5%,
+      96.5% 0.5%,
+      66.1% 0.5%,
+      61.1% 3.5%,
+      38.9% 3.5%,
+      33.9% 0.5%,
+      3% 0%
+    );
+  }
+
+  &-overlay {
+    background-repeat: repeat;
+    background: linear-gradient(
+      rgba(129, 234, 232, 0.037),
+      rgba(87, 179, 255, 0.24) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+  }
+  &-projName {
+    z-index: 4;
+    color: black;
+    background-color: $dark-yellow;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    left: 20.5%;
+    padding: 0 14px;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    // clip-path: polygon(0% 40%, 15% 0%, 85% 0%, 100% 40%, 100% 60%, 85% 100%, 15% 100%, 0% 60%);
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background-size: 300%;
+    background-position: 0% 0%;
+    //    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.7;
+    animation: pan-image 15s linear infinite;
+  }
+
+  &-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    .cube {
+      transition: .2s cubic-bezier(.2,.17,.15,-0.4);
+
+      position: relative;
+      opacity: 0;
+      scale: 0.4;
+      background-color: rgba(255, 255, 255, 0.7);
+      filter: invert(84%) sepia(53%) saturate(896%) hue-rotate(350deg)
+        brightness(97%) contrast(95%);
+      clip-path: polygon(6% 27%, 50% 3%, 94% 26%, 94% 75%, 50% 98.5%, 6% 74%);
+    }
+
+    &::before {
+      content: "";
+      transition: .2s cubic-bezier(.2,.17,.15,-0.4);
+
+      opacity: 0;
+      width: 7px;
+      height: 7px;
+      background-color: white;
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 0px 0px 15px white;
+      top: 50%;
+      left: 50%;
+      z-index: 8;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+     opacity: 0;
+      content: "";
+      transition: .2s cubic-bezier(.2,.17,.15,-0.4);
+
+      width: 70px;
+      height: 2px;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 51%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      rotate: -60deg;
+      transform-origin: 0%;
+    }
+
+    &_title {
+      opacity: 0;
+      transition: .2s cubic-bezier(.5,.17,.15,-0.4);
+      position: absolute;
+      width: 200px;
+      height: 30px;
+      border: 1px solid $dark-yellow;
+      border-left: none;
+      top: -10px;
+      left: 20px;
+      z-index: 6;
+      line-height: 30px;
+      background-color: $dark-blue;
+      color: white;
+      font-size: 1rem;
+      padding-left: 20px;
+      &::before {
+        content: "";
+        width: 21.21px;
+        height: 21.21px;
+        border: 1px solid $dark-yellow;
+        position: absolute;
+        top: 3px;
+        left: -10px;
+        rotate: -45deg;
+        border-radius: 1px;
+        background-color: $dark-blue;
+      }
+
+      &::after {
+        content: "";
+        width: 100px;
+        height: 8px;
+        background-color: $dark-yellow;
+        position: absolute;
+        bottom: -10px;
+        left: 80px;
+        clip-path: polygon(
+          0 100%,
+          30% 100%,
+          45% 25%,
+          97% 25%,
+          100% 0%,
+          45% 0,
+          30% 75%,
+          3% 75%
+        );
+      }
+
+      span::after {
+        content: "";
+        width: 60px;
+        height: 7px;
+        background-color: $dark-yellow;
+        position: absolute;
+        top: -8px;
+        left: 40px;
+        clip-path: polygon(0 100%, 15% 50%, 85% 50%, 100% 100%);
+      }
+    }
+  }
+
+  &:hover {
+    .screen-hover {
+      .cube {
+        opacity: 1;
+      }
+      &::after {
+        opacity: 1;
+      }
+      &::before {
+        opacity: 1;
+      }
+
+      &_title{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
+}
+
+@keyframes pan-image {
+  0% {
+    background-position: 36% 42%;
+    background-size: 200%;
+  }
+
+  20% {
+    background-position: 30% 35%;
+    background-size: 200%;
+  }
+
+  20.0001% {
+    /* -- View 2 -- */
+    background-position: 60% 85%;
+    background-size: 500%;
+  }
+
+  40% {
+    background-position: 49% 81%;
+    background-size: 500%;
+  }
+
+  40.0001% {
+    /* -- View 3 -- */
+    background-position: 80% 42%;
+    background-size: 300%;
+  }
+
+  60% {
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+
+  60.0001% {
+    /* -- View 4 -- */
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+
+  80% {
+    background-position: 70% 4%;
+    background-size: 300%;
+  }
+
+  80.0001% {
+    /* -- View 5 -- */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+
+
+.slider-container {
+    width: 100%;
+    margin: 0 auto;
+
+    img{
+        width: 100%;
+    }
+    ul.slick-dots{
+        bottom: 0;
+    } 
+  }

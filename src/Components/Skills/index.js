@@ -8,7 +8,7 @@ function Skills() {
 
 
     return (
-        <div id='skills-section' className='d-flex'>
+        <div id='skills-section' className='row g-0'>
             <div className="about-me col-md-6 p-5">
                 <h1>About Me</h1>
                 <p>

@@ -6,6 +6,7 @@ function Sidebar() {
     <div className='bg-gray text-center p-2 sidebar d-flex justify-content-between flex-column'>
       <div className="sidebar_logo ">
         <img src="/Images/download.png" alt="" className='w-100' />
+        <p className='text-dark'>Tahir Tahirli</p>
       </div>
       <div className="sidebar_links">
         {/* link 1 */}

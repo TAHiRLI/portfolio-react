@@ -1,13 +1,15 @@
 $sidebar-width: 11%;
 
 
+@import "../../Assets/Styles/variables.scss";
+
 .sidebar {
   height: 100vh;
   width: $sidebar-width;
   position: fixed;
   color:  white;
   &_logo{
-    background-color:#F2E307 ;
+    background-color:$light-yellow ;
   }
 }
 .content {
@@ -36,13 +38,13 @@ $sidebar-width: 11%;
       color: #fff;
       transition: 0.1s;
       &:hover {
-        color: #2BF0FB;
+        color: $cyan;
         cursor: pointer;
     }
    
 }
  .name{
-        color:  #F2E307;
+        color:  $light-yellow;
         font-size: 6rem;
         line-height: 7rem;
     }
@@ -56,7 +58,7 @@ $sidebar-width: 11%;
   }
 }
 .about-me{
-  background-color: #F2E307;
+  background-color: $light-yellow;
 }
 
 
@@ -81,7 +83,7 @@ $sidebar-width: 11%;
   background-color:  black;
   .globe{
     background-color: transparent;
-    color: #F2E307;
+    color: $light-yellow;
     .tagcloud--item{
       font-size: 1rem;
       opacity: 1;

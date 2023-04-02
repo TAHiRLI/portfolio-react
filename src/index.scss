@@ -1,3 +1,5 @@
+
+@import "../src/Assets/Styles/variables";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "/src/Common/buttons.scss";
 
@@ -30,6 +32,15 @@ code {
   background-color: #171718;
 }
 
+.bg-dark-yellow{
+  background-color: #F2CC0F;
+}
+.bg-light-yellow{
+  background-color: #f2e307;
+}
+button.btn-close{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(104%) contrast(103%);
+}
 
 
   /* Firefox */
