@@ -159,8 +159,8 @@
         document.getElementById("greeting").removeEventListener('mousemove', init);
         document.getElementById("greeting").removeEventListener('touchstart', init);
         document.getElementById("greeting").addEventListener('mousemove', mousemove);
-        document.getElementById("greeting").addEventListener('touchmove', mousemove);
-        document.getElementById("greeting").addEventListener('touchstart', touchstart);
+        document.getElementById("greeting").addEventListener('touchmove', mousemove, { passive: true });
+        document.getElementById("greeting").addEventListener('touchstart', touchstart, { passive: true });
 
         mousemove(event);
         reset();
@@ -332,8 +332,8 @@
         // letters('h1');
         // letters('h2');
 
-        document.getElementById("greeting").addEventListener('mousemove', init);
-        document.getElementById("greeting").addEventListener('touchstart', init);
+        document.getElementById("greeting").addEventListener('mousemove', init, { passive: true });
+        document.getElementById("greeting").addEventListener('touchstart', init, { passive: true });
         document.body.addEventListener('orientationchange', resize);
         window.addEventListener('resize', resize);
         window.addEventListener('keyup', keyup);

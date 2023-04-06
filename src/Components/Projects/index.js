@@ -1,6 +1,6 @@
 import React from 'react';
 import './projects.scss';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal} from 'react-bootstrap';
 import Slider from "react-slick";
 
 function Projects() {
@@ -66,7 +66,7 @@ function Projects() {
     };
     return (
         <div>
-            <div className="projects-container p-5 row g-0 justify-content-evenly">
+            <div className="projects-container container row g-0 py-5 justify-content-evenly">
                 {projects.map((proj, i) => (
                     <div onClick={() => { initModal(i); }} className="screen-container" key={i}>
                         <div className="screen">

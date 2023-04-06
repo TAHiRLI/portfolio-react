@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Sidebar/sidebar.scss";
+import "./sidebar.scss";
 
 function Sidebar() {
   return (
@@ -34,7 +34,18 @@ function Sidebar() {
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
         </button>
-
+      {/* link 3 */}
+      <button className='sidebar-link mt-3'>
+          Projects
+          <div className='clip'>
+            <div className="corner leftTop"></div>
+            <div className="corner rightBottom"></div>
+            <div className="corner rightTop"></div>
+            <div className="corner leftBottom"></div>
+          </div>
+          <span className="arrow rightArrow"></span>
+          <span className="arrow leftArrow"></span>
+        </button>
       </div>
       <div className="sidebar_contact-me"></div>
     </div>
