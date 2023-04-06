@@ -1,7 +1,7 @@
 import React from 'react';
-import "./sidebar.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Sidebar() {
   return (
@@ -13,7 +13,7 @@ function Sidebar() {
       <div className="sidebar_links">
         {/* link 1 */}
         <button className='sidebar-link mt-3'>
-          Introduction
+          Home
           <div className='clip'>
             <div className="corner leftTop"></div>
             <div className="corner rightBottom"></div>
@@ -36,9 +36,22 @@ function Sidebar() {
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
         </button>
-      {/* link 3 */}
-      <button className='sidebar-link mt-3'>
+        {/* link 3 */}
+        <button className='sidebar-link mt-3'>
           Projects
+          <div className='clip'>
+            <div className="corner leftTop"></div>
+            <div className="corner rightBottom"></div>
+            <div className="corner rightTop"></div>
+            <div className="corner leftBottom"></div>
+          </div>
+          <span className="arrow rightArrow"></span>
+          <span className="arrow leftArrow"></span>
+        </button>
+
+        {/* link 4 */}
+        <button className='sidebar-link mt-3'>
+          Contact
           <div className='clip'>
             <div className="corner leftTop"></div>
             <div className="corner rightBottom"></div>
@@ -50,23 +63,23 @@ function Sidebar() {
         </button>
       </div>
       <div className="sidebar_contact-me">
-          {/* social */}
+        {/* social */}
 
-          <ul className="sidebar-mobile-content-social text-light">
+        <ul className="sidebar-mobile-content-social text-light">
           <li>
-          <a href="link" target='_blank'>
-          <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
+            <a href="link" target='_blank'>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </li>
           <li>
-          <a href="link" target='_blank'>
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
+            <a href="link" target='_blank'>
+              <FontAwesomeIcon icon={faGithubSquare} />
+            </a>
           </li>
           <li>
-          <a href="link" target='_blank'>
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
+            <a href="link" target='_blank'>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
           </li>
         </ul>
       </div>

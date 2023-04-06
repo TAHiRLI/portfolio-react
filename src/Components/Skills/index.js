@@ -59,6 +59,8 @@ function Skills() {
                         "Ms SQL",
                         ".Net Web API",
                         ".Net MVC",
+                        "BEM",
+                        "Typescript"
 
                     ]}
                 </TagCloud>

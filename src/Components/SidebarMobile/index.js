@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function SidebarMobile(props) {
 
@@ -20,7 +21,7 @@ function SidebarMobile(props) {
         {/* links */}
         <div className="sidebar-mobile-content-links text-center">
           <a href="la" className="sidebar-mobile-content-links-link">
-            <span>Introduction</span>
+            <span>Home</span>
           </a>
           <a href="la" className="sidebar-mobile-content-links-link">
             <span>Skills</span>
@@ -49,7 +50,7 @@ function SidebarMobile(props) {
           </li>
           <li>
           <a href="link" target='_blank'>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faEnvelope} />
           </a>
           </li>
         </ul>
