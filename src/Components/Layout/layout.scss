@@ -192,3 +192,14 @@ $sidebar-width: 180px;
   z-index: 0;
 }
 
+
+@media (max-width:560px) {
+  .globe-container {
+    .globe {
+      .tagcloud--item {
+        font-size: .8rem;
+        opacity: 1;
+      }
+    }
+  }
+}
