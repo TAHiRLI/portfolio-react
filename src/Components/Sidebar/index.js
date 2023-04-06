@@ -1,5 +1,7 @@
 import React from 'react';
 import "./sidebar.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubSquare, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function Sidebar() {
   return (
@@ -47,7 +49,27 @@ function Sidebar() {
           <span className="arrow leftArrow"></span>
         </button>
       </div>
-      <div className="sidebar_contact-me"></div>
+      <div className="sidebar_contact-me">
+          {/* social */}
+
+          <ul className="sidebar-mobile-content-social text-light">
+          <li>
+          <a href="link" target='_blank'>
+          <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          </li>
+          <li>
+          <a href="link" target='_blank'>
+            <FontAwesomeIcon icon={faGithubSquare} />
+          </a>
+          </li>
+          <li>
+          <a href="link" target='_blank'>
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

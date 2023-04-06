@@ -66,7 +66,7 @@ function Projects() {
     };
     return (
         <div>
-            <div className="projects-container container row g-0 py-5 justify-content-evenly">
+            <div className="projects-container  py-5 ">
                 {projects.map((proj, i) => (
                     <div onClick={() => { initModal(i); }} className="screen-container" key={i}>
                         <div className="screen">
