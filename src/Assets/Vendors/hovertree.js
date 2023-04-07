@@ -314,7 +314,9 @@
 
     window.onload = function () {
 
-        ctx = document.getElementById('canvas').getContext('2d');
+        ctx = document.getElementById('canvas')?.getContext('2d');
+        if(ctx === undefined)
+        return;
         ctx.stats = new Stats();
         ctx.running = true;
         ctx.frame = 1;
