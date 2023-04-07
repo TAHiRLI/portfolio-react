@@ -4,6 +4,7 @@ import { faGithubSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import logo from "../../Assets/Images/logo.png"
+import { Link } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -70,19 +71,25 @@ function Sidebar() {
 
         <ul className="sidebar-mobile-content-social text-light">
           <li>
-            <a href="link" target='_blank'>
+            <a href="https://www.linkedin.com/in/tahirtahirli" rel='noreferrer' target='_blank'>
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </li>
           <li>
-            <a href="link" target='_blank'>
+            <a href="https://github.com/TAHiRLI" rel='noreferrer' target='_blank'>
               <FontAwesomeIcon icon={faGithubSquare} />
             </a>
           </li>
           <li>
-            <a href="link" target='_blank'>
+            <Link
+              to='#'
+              onClick={(e) => {
+                window.location.href = 'mailto:tahirli.tahirr@gmail.com';
+                e.preventDefault();
+              }}
+            >
               <FontAwesomeIcon icon={faEnvelope} />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

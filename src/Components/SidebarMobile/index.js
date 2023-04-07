@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import logo from "../../Assets/Images/logo.png";
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../Consts/Routes';
 
 
 function SidebarMobile(props) {
@@ -22,18 +24,18 @@ function SidebarMobile(props) {
 
         {/* links */}
         <div className="sidebar-mobile-content-links text-center">
-          <a href="la" className="sidebar-mobile-content-links-link">
+          <Link to={ROUTES.Home} className="sidebar-mobile-content-links-link">
             <span>Home</span>
-          </a>
-          <a href="la" className="sidebar-mobile-content-links-link">
+          </Link>
+          <Link to={ROUTES.Skills} className="sidebar-mobile-content-links-link">
             <span>Skills</span>
-          </a>
-          <a href="la" className="sidebar-mobile-content-links-link">
+          </Link>
+          <Link to={ROUTES.Projects} className="sidebar-mobile-content-links-link">
             <span>Projects</span>
-          </a>
-          <a href="la" className="sidebar-mobile-content-links-link">
+          </Link>
+          <Link to={ROUTES.Contact} className="sidebar-mobile-content-links-link">
             <span>Contact me</span>
-          </a>
+          </Link>
 
         </div>
 
@@ -41,19 +43,25 @@ function SidebarMobile(props) {
 
         <ul className="sidebar-mobile-content-social text-light">
           <li>
-          <a href="link" target='_blank'>
-          <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
+            <a href="https://www.linkedin.com/in/tahirtahirli" rel='noreferrer' target='_blank'>
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </li>
           <li>
-          <a href="link" target='_blank'>
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
+            <a href="https://github.com/TAHiRLI" rel='noreferrer' target='_blank'>
+              <FontAwesomeIcon icon={faGithubSquare} />
+            </a>
           </li>
           <li>
-          <a href="link" target='_blank'>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
+            <Link
+              to='#'
+              onClick={(e) => {
+                window.location.href = 'mailto:tahirli.tahirr@gmail.com';
+                e.preventDefault();
+              }}
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </Link>
           </li>
         </ul>
       </div>
