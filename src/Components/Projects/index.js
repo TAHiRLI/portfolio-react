@@ -3,6 +3,7 @@ import './projects.scss';
 import { Modal } from 'react-bootstrap';
 import Slider from "react-slick";
 
+
 function Projects() {
 
     const [isShow, invokeModal] = React.useState(false);
@@ -66,31 +67,32 @@ function Projects() {
             }
         ]
     };
+
+ 
     return (
         <div>
             <div className=" p-sm-5 p-3 py-5 ">
                 <h1 className='text-light text-center '>My Projects</h1>
                 <div className="projects-container ">
-                    {projects.reverse().map((proj, i) => (
-                        <div onClick={() => { initModal(i); }} className="screen-container" key={i}>
-                            <div className="screen">
-                                <div className="screen-overlay"></div>
-                                <div className="screen-projName">
-                                    {proj.name}
-                                </div>
-                                <div className="screen-image"
-                                    style={{ backgroundImage: `url(/Images/Projects/${proj.posterPhoto})` }}
-                                ></div>
-
-                                <div className="screen-hover">
-                                    <img src="/Images/cube.png" alt="" className='cube' />
-                                    <div className="screen-hover_title">
-                                        <span>{proj.name}</span>
+                        {projects.reverse().map((proj, i) => (
+                            <div onClick={() => { initModal(i); }} className="screen-container" key={i}>
+                                <div className="screen">
+                                    <div className="screen-overlay"></div>
+                                    <div className="screen-projName">
+                                        {proj.name}
+                                    </div>
+                                    <div className="screen-image"
+                                      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Images/Projects/${proj.posterPhoto})` }}
+                                    ></div>
+                                    <div className="screen-hover">
+                                        <img src={require("../../Assets/Images/cube.png")} alt="" className='cube' />
+                                        <div className="screen-hover_title">
+                                            <span>{proj.name}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </div>
 
             </div>
@@ -103,9 +105,9 @@ function Projects() {
                 <Modal.Body>
                     <Slider {...settings} className="slider-container ">
 
-                        {currentProj.photos?.map((photo) => (
-                            <div>
-                                <img src={`/Images/Projects/${photo}`} alt="" />
+                        {currentProj.photos?.map((photo,i) => (
+                            <div key={i}>
+                                <img src={`${process.env.PUBLIC_URL}/Images/Projects/${photo}`}  alt="" />
                             </div>
                         ))}
 

@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import logo from "../../Assets/Images/logo.png"
+
+
 function Sidebar() {
   return (
     <div className='bg-gray text-center p-2 sidebar d-flex justify-content-between flex-column'>
       <div className="sidebar_logo ">
-        <img src="/Images/download.png" alt="" className='w-100' />
+        <img src={logo} alt="" className='w-100' />
         <p className='text-dark'>Tahir Tahirli</p>
       </div>
       <div className="sidebar_links">

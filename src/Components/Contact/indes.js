@@ -11,22 +11,22 @@ function Contact() {
                         <div className='d-block d-sm-flex justify-content-evenly'>
                             <div className='borderedInput'>
                                 <input type="text" name="" id="" placeholder='Name' className='borderedInput-input' />
-                                <img src="/Images/scifiBorder.png" alt="" className='borderedInput-border' />
+                                <img src={require("../../Assets/Images/scifiBorder.png")} alt="" className='borderedInput-border' />
                             </div>
                             <div className='borderedInput'>
                                 <input type="Email" name="" id="" placeholder='Email' className='borderedInput-input' />
-                                <img src="/Images/scifiBorder.png" alt="" className='borderedInput-border' />
+                                <img src={require("../../Assets/Images/scifiBorder.png")} alt="" className='borderedInput-border' />
                             </div>
                         </div>
 
                         <div className='borderedInput'>
                             <input type="text" name="" id="" placeholder='Subject' className='borderedInput-input' />
-                            <img src="/Images/scifiBorder.png" alt="" className='borderedInput-border' />
+                            <img src={require("../../Assets/Images/scifiBorder.png")} alt="" className='borderedInput-border' />
                         </div>
                         <div>
                             <div className='borderedInput mt-5'>
                                 <textarea name="" id="" cols="50" rows="10" className='borderedInput-textarea' placeholder='Your Message'></textarea>
-                                <img src="/Images/scifiBorder.png" alt="" className='borderedInput-border inTextarea' />
+                                <img src={require("../../Assets/Images/scifiBorder.png")} alt="" className='borderedInput-border inTextarea' />
                             </div>
                         </div>
                         <div className='mt-5 bg-transparent d-flex justify-content-end'>
@@ -36,7 +36,7 @@ function Contact() {
                     </form>
                 </div>
                 <div className="col-md-6 contactMeSection-image d-flex justify-content-center">
-                    <img src="/Images/hand-shake.jpg" alt="" className='w-100' />
+                    <img src={require("../../Assets/Images/hand-shake.jpg")} alt="" className='w-100' />
                 </div>
             </div>
         </div>

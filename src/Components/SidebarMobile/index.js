@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import logo from "../../Assets/Images/logo.png";
+
 
 function SidebarMobile(props) {
 
@@ -14,7 +16,7 @@ function SidebarMobile(props) {
       <div className="sidebar-mobile-content w-100 ">
         {/* logo */}
         <div className="sidebar-mobile-content-logo d-flex col-md-5 col-sm-5 align-items-center flex-column ">
-          <img src="/Images/download.png" alt="" className='w-50 logo' />
+          <img src={logo} alt="" className='w-50 logo' />
           <p className='text-center name'>Tahir Tahirli</p>
         </div>
 
