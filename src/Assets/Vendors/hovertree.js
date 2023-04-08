@@ -191,7 +191,7 @@
         ctx.lineWidth = 1;
 
         if (ctx.frame % 60 === 0) {
-            console.log(hue.update(), Math.round(hue.update()), hue.phase, hue.offset, hue.frequency, hue.amplitude);
+            hue.update()
         }
 
         for (var i = 0, tendril; i < settings.trails; i++) {
@@ -240,16 +240,7 @@
         }
     }
 
-    function keyup(event) {
-
-        switch (event.keyCode) {
-            case 32:
-                save();
-                break;
-            default:
-                // console.log(event.keyCode); hovertree.com
-        }
-    }
+    
 
     // function letters(id) {
 
@@ -338,7 +329,6 @@
         document.getElementById("greeting").addEventListener('touchstart', init, { passive: true });
         document.body.addEventListener('orientationchange', resize);
         window.addEventListener('resize', resize);
-        window.addEventListener('keyup', keyup);
         window.addEventListener('focus', start);
         window.addEventListener('blur', stop);
 

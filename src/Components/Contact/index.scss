@@ -84,9 +84,22 @@
   }
   &-border.inTextarea {
     transform: scaleY(1.35);
+   
   }
 
   ::placeholder {
     color: white;
+  }
+
+  .errorMessage{
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    color:  red;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+ .errorMessage.inTextarea{
+    bottom: -60px;
   }
 }

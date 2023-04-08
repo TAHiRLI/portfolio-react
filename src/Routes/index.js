@@ -21,6 +21,7 @@ function Routes() {
                 <div>
                    <h1 className='text-light'>Skills</h1>
                     <UndexConstruction/>
+                    
                 </div>
                 </Route>
                 {/* Projects */}
