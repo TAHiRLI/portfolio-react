@@ -5,6 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import logo from "../../Assets/Images/logo.png"
 import { Link } from 'react-router-dom';
+import { ROUTES } from '../../Consts/Routes';
 
 
 function Sidebar() {
@@ -16,7 +17,7 @@ function Sidebar() {
       </div>
       <div className="sidebar_links">
         {/* link 1 */}
-        <button className='sidebar-link mt-3'>
+        <a href={ROUTES.Home} className='sidebar-link m-auto mt-3 '>
           Home
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -26,10 +27,10 @@ function Sidebar() {
           </div>
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
-        </button>
+        </a>
 
         {/* link 2 */}
-        <button className='sidebar-link mt-3'>
+        <a href={ROUTES.Skills} className='sidebar-link m-auto mt-3'>
           Skills
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -39,9 +40,9 @@ function Sidebar() {
           </div>
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
-        </button>
+        </a>
         {/* link 3 */}
-        <button className='sidebar-link mt-3'>
+        <a href={ROUTES.Projects} className='sidebar-link m-auto mt-3'>
           Projects
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -51,10 +52,10 @@ function Sidebar() {
           </div>
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
-        </button>
+        </a>
 
         {/* link 4 */}
-        <button className='sidebar-link mt-3'>
+        <a href={ROUTES.Contact} className='sidebar-link m-auto mt-3'>
           Contact
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -64,7 +65,7 @@ function Sidebar() {
           </div>
           <span className="arrow rightArrow"></span>
           <span className="arrow leftArrow"></span>
-        </button>
+        </a>
       </div>
       <div className="sidebar_contact-me">
         {/* social */}

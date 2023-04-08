@@ -1,10 +1,14 @@
-$button-color: #F2E307;
+$button-color: #f2e307;
 
-button.sidebar-link {
+button.sidebar-link,
+a.sidebar-link {
+  display: block;
   padding: 0px;
   position: relative;
+  text-decoration: none;
   width: 80%;
   height: 4em;
+  line-height: 4em;
   outline: none;
   transition: 0.1s;
   background-color: transparent;
@@ -12,10 +16,49 @@ button.sidebar-link {
   font-size: 13px;
   font-weight: bold;
   color: #ddebf0;
+  &:hover {
+    .rightArrow {
+      background-color: #27c39f;
+      left: -15%;
+      animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+    }
+    .leftArrow {
+      background-color: #27c39f;
+      left: 103%;
+      animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+    }
+    .leftTop {
+      animation: 0.1s ease-in-out 0.05s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+    }
+    .rightTop {
+      animation: 0.1s ease-in-out 0.15s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+    }
+
+    .rightBottom {
+      animation: 0.1s ease-in-out 0.25s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+    }
+
+    .leftBottom {
+      animation: 0.1s ease-in-out 0.35s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+    }
+
+    .corner {
+      transform: scale(1.25) rotate(45deg);
+    }
+
+    .clip {
+      animation: 0.2s ease-in-out 0.55s both greenLight8;
+      --color: #27c39f;
+    }
+  }
 }
 
 .clip {
-  --color: #F2E307;
+  --color: #f2e307;
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -66,18 +109,6 @@ button.sidebar-link {
   left: 102%;
 }
 
-button:hover .rightArrow {
-  background-color: #27c39f;
-  left: -15%;
-  animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-}
-
-button:hover .leftArrow {
-  background-color: #27c39f;
-  left: 103%;
-  animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-}
-
 .corner {
   position: absolute;
   width: 4em;
@@ -108,38 +139,9 @@ button:hover .leftArrow {
   left: 100%;
 }
 
-button:hover .leftTop {
-  animation: 0.1s ease-in-out 0.05s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover .rightTop {
-  animation: 0.1s ease-in-out 0.15s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover .rightBottom {
-  animation: 0.1s ease-in-out 0.25s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover .leftBottom {
-  animation: 0.1s ease-in-out 0.35s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover .corner {
-  transform: scale(1.25) rotate(45deg);
-}
-
-button:hover .clip {
-  animation: 0.2s ease-in-out 0.55s both greenLight8;
-  --color: #27c39f;
-}
-
 @keyframes changeColor8 {
   from {
-    background-color: #F2E307;
+    background-color: #f2e307;
   }
 
   to {
