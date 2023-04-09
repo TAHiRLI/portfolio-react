@@ -1,6 +1,6 @@
 {
-  "homepage": "http://TAHiRLI.github.io/portfolio-react",
   "name": "portfolio-react",
+  "homepage": "http://TAHiRLI.github.io/portfolio-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

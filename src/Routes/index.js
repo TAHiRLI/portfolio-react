@@ -8,7 +8,7 @@ import UndexConstruction from '../Components/UnderConstruction';
 
 function Routes() {
     return (
-        <Router>
+        <Router basename="/portfolio-react">
             <Switch>
                 {/* Home */}
                 <Route exact path={ROUTES.Home} >
