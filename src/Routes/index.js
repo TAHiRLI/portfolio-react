@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router,HashRouter, Switch } from 'react-router-dom';
 import { ROUTES } from '../Consts/Routes';
 
 import Layout from '../Components/Layout';
@@ -8,7 +8,7 @@ import UndexConstruction from '../Components/UnderConstruction';
 
 function Routes() {
     return (
-        <Router basename="/portfolio-react">
+        <HashRouter basename="/portfolio-react">
             <Switch>
                 {/* Home */}
                 <Route exact path={ROUTES.Home} >
@@ -41,7 +41,7 @@ function Routes() {
                 </div>
                 </Route>
             </Switch>
-        </Router>
+        </HashRouter>
 
     );
 }
