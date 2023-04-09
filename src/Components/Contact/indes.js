@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 
 
@@ -26,11 +26,11 @@ function Contact() {
         emailjs.send('service_a7mnpkr', 'template_s2qa69g', emailParams)
             .then(response => {
                 console.log(response)
-                Swal.fire(
-                    'Sent!',
-                    'Your message has been sent.',
-                    'success'
-                  );
+                // Swal.fire(
+                //     'Sent!',
+                //     'Your message has been sent.',
+                //     'success'
+                //   );
             })
             .catch(error => console.error(error));
     };
