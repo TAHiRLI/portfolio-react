@@ -17,7 +17,7 @@ function Sidebar() {
       </div>
       <div className="sidebar_links">
         {/* link 1 */}
-        <a href={ROUTES.Home} className='sidebar-link m-auto mt-3 '>
+        <a href={`#${ROUTES.Home}`} className='sidebar-link m-auto mt-3 '>
           Home
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -30,7 +30,7 @@ function Sidebar() {
         </a>
 
         {/* link 2 */}
-        <a href={ROUTES.Skills} className='sidebar-link m-auto mt-3'>
+        <a href={`#${ROUTES.Skills}`} className='sidebar-link m-auto mt-3'>
           Skills
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -42,7 +42,7 @@ function Sidebar() {
           <span className="arrow leftArrow"></span>
         </a>
         {/* link 3 */}
-        <a href={ROUTES.Projects} className='sidebar-link m-auto mt-3'>
+        <a href={`#${ROUTES.Projects}`} className='sidebar-link m-auto mt-3'>
           Projects
           <div className='clip'>
             <div className="corner leftTop"></div>
@@ -55,7 +55,7 @@ function Sidebar() {
         </a>
 
         {/* link 4 */}
-        <a href={ROUTES.Contact} className='sidebar-link m-auto mt-3'>
+        <a href={`#${ROUTES.Contact}`} className='sidebar-link m-auto mt-3'>
           Contact
           <div className='clip'>
             <div className="corner leftTop"></div>
