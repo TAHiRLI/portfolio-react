@@ -10,7 +10,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@frank-mayer/react-tag-cloud": "^1.1.1",
+    "@frank-mayer/react-tag-cloud": "^1.2.1",
     "@hookform/resolvers": "^3.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "12.1.5",
